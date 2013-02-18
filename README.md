@@ -22,8 +22,8 @@ Clone it: don't fork it.
 
 Create a new GitHub application with the following URLs:
 
-* *URL*: `http://0.0.0.0:2999/`
-* *Callback URL*: `http://0.0.0.0:2999/auth/github/callback`
+* URL: `http://0.0.0.0:2999/`
+* Callback URL: `http://0.0.0.0:2999/auth/github/callback`
 
 Add the following configuration keys to `config/application.yml`:
 
@@ -38,6 +38,19 @@ have Foreman installed, simply run:
 ```bash
 foreman start
 open http://0.0.0.0:2999/
+```
+
+## Deployment
+
+Deployment is simple to Heroku:
+
+```bash
+heroku create my-app
+heroku config:set \
+  OMNIAUTH_PROVIDER_KEY="..." \
+  OMNIAUTH_PROVIDER_SECRET="..."
+git push heroku master
+heroku run bundle exec rake db:migrate
 ```
 
 [foreman]: http://ddollar.github.com/foreman/
