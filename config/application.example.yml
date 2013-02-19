@@ -1,17 +1,27 @@
 # Add account credentials and API keys here.
 # See http://railsapps.github.com/rails-environment-variables.html
+
 # This file should be listed in .gitignore to keep your settings secret!
-# Each entry sets a local environment variable and overrides ENV variables in the Unix shell.
-# For example, setting:
-# GMAIL_USERNAME: Your_Gmail_Username
-# makes 'Your_Gmail_Username' available as ENV["GMAIL_USERNAME"]
-# Add application configuration variables here, as shown below.
+# Each entry sets a local environment variable and overrides ENV variables in
+# the Unix shell.
 #
-SENDGRID_USERNAME: Your_Username
-SENDGRID_PASSWORD: Your_Password
+# For example, setting:
+#
+#   GITHUB_CLIENT_ID: your_github_client_id
+#
+# makes 'your_github_client_id' available as ENV["GITHUB_CLIENT_ID"]
+#
+# Add application configuration variables here, as shown below.
+
+GITHUB_CLIENT_ID: your_github_client_id
+GITHUB_CLIENT_SECRET: your_github_client_secret
+GITHUB_SCOPE:
+
 ADMIN_NAME: First User
 ADMIN_EMAIL: user@example.com
 ADMIN_PASSWORD: changeme
-OMNIAUTH_PROVIDER_KEY: Your_OmniAuth_Provider_Key
-OMNIAUTH_PROVIDER_SECRET: Your_OmniAuth_Provider_Secret
-ROLES: [admin, user, VIP]
+
+ROLES: [admin, user, vip]
+
+SENDGRID_USERNAME: Your_Username
+SENDGRID_PASSWORD: Your_Password

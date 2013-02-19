@@ -27,8 +27,11 @@ Create a new GitHub application with the following URLs:
 
 Add the following configuration keys to `config/application.yml`:
 
-* `OMNIAUTH_PROVIDER_KEY`: GitHub Client ID
-* `OMNIAUTH_PROVIDER_SECRET`: Client Secret
+* `GITHUB_CLIENT_ID`: GitHub Client ID
+* `GITHUB_CLIENT_SECRET`: Client Secret
+
+You can also set `GITHUB_SCOPE` to specify the [scope][scope] you want to ask
+users for access to.
 
 ## Running the application
 
@@ -47,8 +50,8 @@ Deployment is simple to Heroku:
 ```bash
 heroku create my-app
 heroku config:set \
-  OMNIAUTH_PROVIDER_KEY="..." \
-  OMNIAUTH_PROVIDER_SECRET="..."
+  GITHUB_CLIENT_ID="..." \
+  GITHUB_CLIENT_SECRET="..."
 git push heroku master
 heroku run bundle exec rake db:migrate
 ```
@@ -60,3 +63,4 @@ heroku run bundle exec rake db:migrate
 [quiet]: https://github.com/evrone/quiet_assets
 [better]: https://github.com/charliesome/better_errors
 [sendgrid]: http://sendgrid.com/
+[scope]: http://developer.github.com/v3/oauth/#scopes
