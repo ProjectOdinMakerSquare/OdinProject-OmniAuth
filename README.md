@@ -27,8 +27,8 @@ Create a new GitHub application with the following URLs:
 
 Add the following configuration keys to `config/application.yml`:
 
-* `GITHUB_CLIENT_ID`: GitHub Client ID
-* `GITHUB_CLIENT_SECRET`: Client Secret
+* `GITHUB_CLIENT_ID`
+* `GITHUB_CLIENT_SECRET`
 
 You can also set `GITHUB_SCOPE` to specify the [scope][scope] you want to ask
 users for access to.
